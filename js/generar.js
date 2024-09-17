@@ -14,11 +14,7 @@ const plantillasDisponibles = [
 {
   nombre: "ejemplo 2",
   ruta: "../plantillas/ejemplo2.js"
-},
-{
-  nombre: "ejemplo 3",
-  ruta: "../plantillas/ejemplo3.js"
-},
+}
 ];
 
 const tagSelect = document.getElementById("plantillaSelect")
