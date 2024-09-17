@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JToolify - Generador</title>
+    <link rel="stylesheet" href="../css/generar.css">
+</head>
+<body>
+    <header class="header">
+        <a href="../index.html" class="button">Volver</a>
+        <div class="logo">JToolify</div>
+    </header>
+
+    <div class="text-content">
+        <h1>Selecciona una Plantilla</h1>
+        <p>Elige la plantilla que deseas utilizar para generar tu mensaje.</p>
+        <div class="selector-container">
+            <select class="template-select" id="plantillaSelect">
+                <option value="" disabled selected>Seleccionar Plantilla</option>
+            </select>
+            <button class="select-all" id="botonSeleccionar" disabled>Seleccionar</button>
+            <button class="preview-button" id="botonVistaPrevia" disabled>Vista Previa</button>
+        </div>
+    </div>
+
+    <!-- Modales -->
+    <div id="templateModal" class="modal">
+        <div class="modal-content">
+            <span class="close-button" onclick="closeModal(templateModal)">&times;</span>
+            <br>
+            <div id="formulario-container"></div> <!-- Aquí se generará el formulario -->
+            <br>
+            <button id="botonVistaPreviaModal" class="preview-button">Vista Previa</button>
+            <button id="botonCopiar" class="select-all">Copiar Contenido</button>
+        </div>
+    </div>
+    
+
+    <div id="previewModal" class="modal">
+        <div class="modal-content">
+            <span class="close-button" onclick="closeModal(previewModal)">&times;</span>
+            <br>
+            <div id="preview-container"></div> <!-- Aquí se mostrará la vista previa -->
+        </div>
+    </div>
+
+
+    <script src="../js/generar.js"></script>
+</body>
+</html>

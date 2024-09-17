@@ -1,0 +1,307 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100dvh;
+  min-height: 550px;
+  background: linear-gradient(120deg, #2a2a2a 60%, #f8a61c 60%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.header {
+  color: #fff;
+  text-align: left;
+  padding: 20px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.button {
+  margin-right: 15px;
+  width: max-content;
+  background-color: #febe3a;
+  color: #333;
+  padding: 10px 15px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.logo {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.text-content {
+  text-align: center;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 8px;
+  width: 90%;
+  margin: auto 0px;
+}
+
+.text-content h1 {
+  color: #f9c22c;
+  margin-bottom: 10px;
+}
+
+.text-content p {
+  color: #fff;
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.selector-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.template-select {
+  background-color: #fff;
+  color: #333;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 1em;
+  width: 200px;
+  transition: border-color 0.3s ease;
+}
+
+.template-select:focus {
+  border-color: #febe3a;
+  outline: none;
+}
+
+.select-all {
+  background-color: #febe3a;
+  color: #333;
+  padding: 13px 23px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.1em;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.select-all:hover {
+  background-color: #f9c22c;
+}
+
+.preview-button {
+  background-color: #4a90e2;
+  color: #fff;
+  padding: 13px 23px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.1em;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.preview-button:hover {
+  background-color: #357abd;
+}
+
+.custom-template {
+  position: absolute;
+  bottom: 20px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.upload-button {
+  background-color: #febe3a;
+  color: #333;
+  padding: 13px 23px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.1em;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.upload-button:hover {
+  background-color: #f9c22c;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 10;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+#preview-modal {
+  z-index: 15;
+}
+
+.modal-content {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 600px;
+  position: relative;
+  margin: 0px auto;
+  margin-top: 70px;
+}
+
+.close-button {
+  color: #333;
+  float: right;
+  font-size: 1.5em;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close-button:hover {
+  color: #febe3a;
+}
+
+#formulario-upload-container, #formulario-container {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Nuevo estilo para agrupar label e input */
+.form-group {
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+/* Estilo general para los labels */
+label {
+  width: 100%;
+  display: block;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+/* Estilo general para los inputs, selects y textarea */
+input, select, textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Especificaciones adicionales para tipos de input */
+input[type="color"] {
+  background-color: #ffffff;
+  width: 40px;
+  height: 40px;
+}
+
+input[type="range"] {
+  width: 100%;
+}
+
+input[type="checkbox"], input[type="radio"] {
+  width: auto;
+  margin-right: 10px;
+}
+
+textarea {
+  resize: vertical;
+  background-color: #fff;
+}
+
+/* Estilo para inputs, selects y textarea en foco */
+input:focus, select:focus, textarea:focus {
+  border-color: #007bff;
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(38, 143, 255, 0.2);
+}
+
+/* Estilo para select */
+select {
+  cursor: pointer;
+}
+
+select:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 0 0.2rem rgba(38, 143, 255, 0.25);
+}
+
+/* Contenedor para agrupación de opciones tipo radio */
+.radio-group {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Contenedor para cada opción radio */
+.radio-wrapper {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.radio-wrapper label {
+  margin: 0;
+  font-weight: normal;
+}
+
+.form-group-radio {
+}
+
+.form-group-radio > label {
+  margin: 15px 0px;
+}
+
+
+.form-group-selector-radio {
+  display: flex;
+  gap: 10px;
+}
+
+.form-group-casilla {
+  display: flex;
+  align-items: center;
+
+}
+
+.form-group-casilla label {
+  margin: 0;
+  width: max-content;
+  margin-right: 20px;
+}
+
+.form-group-casilla input[type="checkbox"] {
+  margin: 0%;
+}
+
+.form-group-selector-radio label {
+  width: 50%;
+}
+
+.modal button {
+  margin-bottom: 10px;
+}
